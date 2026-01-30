@@ -22,7 +22,6 @@ function startGame() {
   showQuestion();
 }
 
-// Display a question
 function showQuestion() {
   const q = questions[currentIndex];
 
@@ -30,17 +29,21 @@ function showQuestion() {
   const choicesDiv = document.getElementById("choices");
   const feedback = document.getElementById("feedback");
 
-  questionEl.textContent = q.question;
+  // Reset feedback
   feedback.textContent = "";
   feedback.classList.remove("show");
 
-  // Fade-in animation reset
+  // Apply fade-in animation
   questionEl.classList.remove("fade-in");
   void questionEl.offsetWidth;
   questionEl.classList.add("fade-in");
 
+  questionEl.textContent = q.question;
+
+  // Clear choices
   choicesDiv.innerHTML = "";
 
+  // Add choices with fade-in
   q.choices.forEach(choice => {
     const btn = document.createElement("button");
     btn.textContent = choice;
@@ -49,6 +52,7 @@ function showQuestion() {
     choicesDiv.appendChild(btn);
   });
 }
+
 
 // Handle answer selection
 function checkAnswer(choice) {
@@ -96,3 +100,4 @@ document.getElementById("start-btn").onclick = startGame;
 loadQuestions();
 
 });
+
