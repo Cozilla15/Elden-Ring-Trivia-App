@@ -13,5 +13,65 @@
     "question": "What is the name of the spectral steed?",
     "choices": ["Torrent", "Roach", "Specter", "Ashmane"],
     "answer": "Torrent"
+  },
+  {
+    "question": "What item allows the Tarnished to summon spirits?",
+    "choices": ["Spirit Calling Bell", "Ashen Flute", "Ghost Lantern", "Wraith Charm"],
+    "answer": "Spirit Calling Bell"
+  },
+  {
+    "question": "Who is the ruler of Stormveil Castle?",
+    "choices": ["Godrick the Grafted", "Morgott", "Mohg", "Radagon"],
+    "answer": "Godrick the Grafted"
+  },
+  {
+    "question": "Which Great Rune belongs to Rennala?",
+    "choices": ["Great Rune of the Unborn", "Great Rune of the Golden Order", "Great Rune of Rot", "Great Rune of Blood"],
+    "answer": "Great Rune of the Unborn"
+  },
+  {
+    "question": "Which demigod is known as the Starscourge?",
+    "choices": ["Radahn", "Rykard", "Malenia", "Mohg"],
+    "answer": "Radahn"
+  },
+  {
+    "question": "What is the name of the hub area where NPCs gather?",
+    "choices": ["Roundtable Hold", "The Nexus", "Majula", "Firelink Shrine"],
+    "answer": "Roundtable Hold"
+  },
+  {
+    "question": "Which character helps you level up?",
+    "choices": ["Melina", "Ranni", "Sellen", "Fia"],
+    "answer": "Melina"
+  },
+  {
+    "question": "What is the name of the giant walking structures carrying buildings?",
+    "choices": ["Walking Mausoleums", "Golem Towers", "Colossal Guardians", "Titan Keeps"],
+    "answer": "Walking Mausoleums"
+  },
+  {
+    "question": "Which region is known for scarlet rot?",
+    "choices": ["Caelid", "Liurnia", "Altus Plateau", "Mountaintops of the Giants"],
+    "answer": "Caelid"
+  },
+  {
+    "question": "Who is the Blade of Miquella?",
+    "choices": ["Malenia", "Radahn", "Ranni", "Melina"],
+    "answer": "Malenia"
+  },
+  {
+    "question": "What weapon does Malenia primarily use?",
+    "choices": ["Katana", "Greatsword", "Twinblades", "Spear"],
+    "answer": "Katana"
+  },
+  {
+    "question": "Which boss is fought in the Academy of Raya Lucaria?",
+    "choices": ["Rennala", "Radagon", "Godfrey", "Morgott"],
+    "answer": "Rennala"
+  },
+  {
+    "question": "What is the ultimate goal of the Tarnished?",
+    "choices": ["Become Elden Lord", "Destroy the Erdtree", "Serve Ranni", "Escape the Lands Between"],
+    "answer": "Become Elden Lord"
   }
 ]
