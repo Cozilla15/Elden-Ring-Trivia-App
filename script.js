@@ -4,13 +4,13 @@ let questions = [];
 let currentIndex = 0;
 let score = 0;
 
-// Load questions from JSON
+// Load questions
 async function loadQuestions() {
   const res = await fetch("data/questions.json");
   questions = await res.json();
 }
 
-// Start the game
+// Start game
 function startGame() {
   document.getElementById("start-menu").style.display = "none";
   document.getElementById("game-container").style.display = "block";
@@ -22,6 +22,7 @@ function startGame() {
   showQuestion();
 }
 
+// Show question
 function showQuestion() {
   const q = questions[currentIndex];
 
@@ -29,21 +30,18 @@ function showQuestion() {
   const choicesDiv = document.getElementById("choices");
   const feedback = document.getElementById("feedback");
 
-  // Reset feedback
   feedback.textContent = "";
   feedback.classList.remove("show");
 
-  // Apply fade-in animation
+  // Fade-in
   questionEl.classList.remove("fade-in");
   void questionEl.offsetWidth;
   questionEl.classList.add("fade-in");
 
   questionEl.textContent = q.question;
 
-  // Clear choices
   choicesDiv.innerHTML = "";
 
-  // Add choices with fade-in
   q.choices.forEach(choice => {
     const btn = document.createElement("button");
     btn.textContent = choice;
@@ -53,8 +51,7 @@ function showQuestion() {
   });
 }
 
-
-// Handle answer selection
+// Check answer
 function checkAnswer(choice) {
   const q = questions[currentIndex];
   const feedback = document.getElementById("feedback");
@@ -73,7 +70,8 @@ function checkAnswer(choice) {
   document.getElementById("next-btn").style.display = "inline-block";
 }
 
-/document.getElementById("next-btn").onclick = () => {
+// Next question with fade-out → fade-in
+document.getElementById("next-btn").onclick = () => {
   const questionEl = document.getElementById("question");
   const choicesDiv = document.getElementById("choices");
 
@@ -90,7 +88,6 @@ function checkAnswer(choice) {
     if (currentIndex < questions.length) {
       document.getElementById("next-btn").style.display = "none";
 
-      // Remove fade-out so next question can fade-in
       questionEl.classList.remove("fade-out");
       choicesDiv.classList.remove("fade-out");
 
@@ -98,7 +95,7 @@ function checkAnswer(choice) {
     } else {
       endGame();
     }
-  }, 450); // matches fade-out duration
+  }, 450);
 };
 
 // End screen
@@ -110,12 +107,8 @@ function endGame() {
   `;
 }
 
-// Start button
 document.getElementById("start-btn").onclick = startGame;
 
-// Load questions on page load
 loadQuestions();
 
 });
-
-
