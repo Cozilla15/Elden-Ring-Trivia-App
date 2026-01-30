@@ -10,7 +10,7 @@ body {
   overflow: hidden;
 }
 
-/* ===== PURE CSS FOG (NO IMAGE REQUIRED) ===== */
+/* ===== PURE CSS FOG ===== */
 body::before,
 body::after {
   content: "";
@@ -54,7 +54,6 @@ body::after {
   font-size: 1rem;
   opacity: 0.7;
   margin-bottom: 40px;
-  font-family: 'Inter', sans-serif;
 }
 
 .menu-btn {
@@ -100,7 +99,6 @@ body::after {
 #question {
   font-size: 1.4rem;
   font-family: 'Cinzel', serif;
-  color: #e5d9b6;
 }
 
 /* ===== CHOICES ===== */
@@ -122,7 +120,6 @@ body::after {
   cursor: pointer;
   border-radius: 4px;
   transition: 0.2s;
-  font-family: 'Inter', sans-serif;
 }
 
 #choices button:hover {
@@ -136,7 +133,6 @@ body::after {
   font-size: 1.2rem;
   opacity: 0;
   transition: opacity 0.6s ease;
-  font-family: 'Inter', sans-serif;
 }
 
 #feedback.show {
@@ -163,32 +159,21 @@ body::after {
   box-shadow: 0 0 15px rgba(212,175,55,0.5);
 }
 
-/* ===== ANIMATIONS ===== */
+/* ===== TRANSITIONS ===== */
 .fade-in {
-  animation: fadeIn 0.8s ease forwards;
+  animation: fadeIn 0.6s ease forwards;
 }
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== QUESTION TRANSITION ANIMATIONS ===== */
 
 .fade-out {
   animation: fadeOut 0.5s ease forwards;
 }
 
-@keyframes fadeOut {
-  from { opacity: 1; transform: translateY(0); }
-  to { opacity: 0; transform: translateY(-10px); }
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease forwards;
-}
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
 }
