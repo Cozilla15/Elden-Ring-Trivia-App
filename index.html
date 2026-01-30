@@ -4,19 +4,22 @@
   <meta charset="UTF-8">
   <title>Elden Ring Trivia</title>
 
-  <!-- Elden Ring–style fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="title">
-    <h1>ELDEN RING TRIVIA</h1>
+  <!-- START MENU -->
+  <div id="start-menu" class="fade-in">
+    <h1 class="title-main">ELDEN RING TRIVIA</h1>
     <p class="subtitle">Test your knowledge, Tarnished</p>
+    <button id="start-btn" class="menu-btn">Begin Journey</button>
   </div>
 
-  <div id="game-container">
+  <!-- GAME UI -->
+  <div id="game-container" style="display:none;">
+    <div class="score-box">Score: <span id="score">0</span></div>
+
     <div id="question-box">
       <div id="question"></div>
     </div>
