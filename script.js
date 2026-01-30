@@ -73,15 +73,32 @@ function checkAnswer(choice) {
   document.getElementById("next-btn").style.display = "inline-block";
 }
 
-// Next question button
-document.getElementById("next-btn").onclick = () => {
-  currentIndex++;
-  if (currentIndex < questions.length) {
-    document.getElementById("next-btn").style.display = "none";
-    showQuestion();
-  } else {
-    endGame();
-  }
+/document.getElementById("next-btn").onclick = () => {
+  const questionEl = document.getElementById("question");
+  const choicesDiv = document.getElementById("choices");
+
+  // Fade out current content
+  questionEl.classList.remove("fade-in");
+  questionEl.classList.add("fade-out");
+
+  choicesDiv.classList.remove("fade-in");
+  choicesDiv.classList.add("fade-out");
+
+  setTimeout(() => {
+    currentIndex++;
+
+    if (currentIndex < questions.length) {
+      document.getElementById("next-btn").style.display = "none";
+
+      // Remove fade-out so next question can fade-in
+      questionEl.classList.remove("fade-out");
+      choicesDiv.classList.remove("fade-out");
+
+      showQuestion();
+    } else {
+      endGame();
+    }
+  }, 450); // matches fade-out duration
 };
 
 // End screen
@@ -100,4 +117,5 @@ document.getElementById("start-btn").onclick = startGame;
 loadQuestions();
 
 });
+
 
