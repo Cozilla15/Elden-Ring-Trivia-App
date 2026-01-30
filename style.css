@@ -113,4 +113,133 @@ body {
 #feedback.show {
   opacity: 1;
 }
+body {
+  margin: 0;
+  padding: 0;
+  background: #0b0b0b;
+  color: #e5d9b6;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+/* START MENU */
+#start-menu {
+  margin-top: 120px;
+}
+
+.title-main {
+  font-family: 'Cinzel', serif;
+  font-size: 3.2rem;
+  color: #d4af37;
+  letter-spacing: 3px;
+}
+
+.menu-btn {
+  margin-top: 30px;
+  padding: 14px 30px;
+  background: #d4af37;
+  color: #0b0b0b;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Cinzel', serif;
+  transition: 0.2s;
+}
+
+.menu-btn:hover {
+  background: #b8962f;
+}
+
+/* SCORE */
+.score-box {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-family: 'Cinzel', serif;
+  color: #d4af37;
+}
+
+/* QUESTION BOX */
+#question-box {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  padding: 20px;
+  border: 2px solid #d4af37;
+  background: rgba(20, 20, 20, 0.7);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+  border-radius: 6px;
+}
+
+#question {
+  font-size: 1.4rem;
+  font-family: 'Cinzel', serif;
+}
+
+/* CHOICES */
+#choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#choices button {
+  width: 60%;
+  max-width: 400px;
+  margin: 10px 0;
+  padding: 12px;
+  background: #1a1a1a;
+  border: 2px solid #d4af37;
+  color: #e5d9b6;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+#choices button:hover {
+  background: #2a2a2a;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* FEEDBACK */
+#feedback {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+#feedback.show {
+  opacity: 1;
+}
+
+/* NEXT BUTTON */
+.next-btn {
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: #d4af37;
+  color: #0b0b0b;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Cinzel', serif;
+  transition: 0.2s;
+}
+
+.next-btn:hover {
+  background: #b8962f;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
