@@ -10,15 +10,26 @@ async function loadQuestions() {
 function showQuestion() {
   const q = questions[currentIndex];
 
-  document.getElementById("question").textContent = q.question;
-
+  const questionEl = document.getElementById("question");
   const choicesDiv = document.getElementById("choices");
+  const feedback = document.getElementById("feedback");
+
+  questionEl.textContent = q.question;
+  feedback.textContent = "";
+  feedback.classList.remove("show");
+
+  // Fade-in animation
+  questionEl.classList.remove("fade-in");
+  void questionEl.offsetWidth;
+  questionEl.classList.add("fade-in");
+
   choicesDiv.innerHTML = "";
 
   q.choices.forEach(choice => {
     const btn = document.createElement("button");
     btn.textContent = choice;
     btn.onclick = () => checkAnswer(choice);
+    btn.classList.add("fade-in");
     choicesDiv.appendChild(btn);
   });
 }
@@ -35,18 +46,18 @@ function checkAnswer(choice) {
     feedback.style.color = "#d46a6a";
   }
 
+  feedback.classList.add("show");
   document.getElementById("next-btn").style.display = "inline-block";
 }
 
 document.getElementById("next-btn").onclick = () => {
   currentIndex++;
   if (currentIndex < questions.length) {
-    document.getElementById("feedback").textContent = "";
     document.getElementById("next-btn").style.display = "none";
     showQuestion();
   } else {
     document.getElementById("game-container").innerHTML =
-      "<h2>You have completed the trial, Tarnished.</h2>";
+      "<h2 class='fade-in'>You have completed the trial, Tarnished.</h2>";
   }
 };
 
