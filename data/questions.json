@@ -1,0 +1,17 @@
+[
+  {
+    "question": "What is the name of the starting region in Elden Ring?",
+    "choices": ["Limgrave", "Caelid", "Altus Plateau", "Liurnia"],
+    "answer": "Limgrave"
+  },
+  {
+    "question": "Who is the first major boss many players encounter?",
+    "choices": ["Margit the Fell Omen", "Godrick the Grafted", "Radahn", "Rennala"],
+    "answer": "Margit the Fell Omen"
+  },
+  {
+    "question": "What is the name of the spectral steed?",
+    "choices": ["Torrent", "Roach", "Specter", "Ashmane"],
+    "answer": "Torrent"
+  }
+]
